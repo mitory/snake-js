@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Змейка</title>
+	<link rel="icon" type="image/svg+xml" href="icon.svg" />
+	<link rel="stylesheet" href="zero_style.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="score-bar">
+				<div class="d-none score best-score">
+					Best Score: 0
+				</div>
+				<div class="score current-score">
+					Score: 0
+				</div>
+			</div>
+		</div>
+		<div class="game-wrapper">
+			<canvas id="game" width="304" height="304"></canvas>
+		</div>
+
+		<div class="d-none button-wrapper">
+			<button class="button btn1"></button>
+			<button class="button btn2"></button>
+			<button class="button btn3"></button>
+			<button class="button btn4"></button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
