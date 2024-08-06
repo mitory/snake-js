@@ -72,12 +72,12 @@ body {
 
 
 .button-wrapper {
-	width: 200px;
+	width: 300px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	grid-column-gap: 0px;
+	grid-column-gap: 10px;
 	grid-row-gap: 0px;
 }
 
@@ -102,9 +102,9 @@ body {
 	background-color: #67E667;
 	box-shadow: 0 0 3px 3px white;
 	border-radius: 10px;
-	width: 40px;
-	height: 40px;
-	background-size: 40px;
+	width: 55px;
+	height: 55px;
+	background-size: 55px;
 }
 
 .d-none {
