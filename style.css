@@ -10,18 +10,13 @@ body {
 		"BNCE" 100,
 		"INFM" 0,
 		"SPAC" 12;
+	overflow:hidden;
 }
 
 .container {
 	width: 320px;
 	margin: 0 auto;
 	padding: 50px 0;
-}
-
-@media(max-width: 500px) {
-	.container {
-		padding: 15px 0;
-	}
 }
 
 .header {
@@ -109,4 +104,13 @@ body {
 
 .d-none {
 	display: none;
+}
+
+@media(max-width: 500px) {
+	.container {
+		padding: 15px 0;
+	}
+	.score {
+		padding: 5px;
+	}
 }
