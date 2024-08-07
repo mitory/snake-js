@@ -149,6 +149,42 @@ document.querySelector('.btn3').onclick = () => {
 	 if (headDirection.x !== -1 || snake.length === 1) headDirection = creatCord(1, 0);
 };
 
+
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+window.addEventListener('touchstart', function(event) {
+	touchStartX = event.changedTouches[0].screenX;
+	touchStartY = event.changedTouches[0].screenY;
+}, false);
+
+window.addEventListener('touchend', function(event) {
+	touchEndX = event.changedTouches[0].screenX;
+	touchEndY = event.changedTouches[0].screenY;
+	handleSwipeGesture();
+}, false);
+
+function handleSwipeGesture() {
+	const deltaX = touchEndX - touchStartX;
+	const deltaY = touchEndY - touchStartY;
+
+	if (Math.abs(deltaX) > Math.abs(deltaY)) {
+		if (deltaX > 0) {
+			if (headDirection.x !== -1 || snake.length === 1) headDirection = creatCord(1, 0); //right
+		} else {
+			 if (headDirection.x !== 1 || snake.length === 1) headDirection = creatCord(-1, 0); //left
+		}
+	} else {
+		if (deltaY > 0) {
+			if (headDirection.y !== -1 || snake.length === 1) headDirection = creatCord(0, 1); //down
+		} else {
+			 if (headDirection.y !== 1 || snake.length === 1) headDirection = creatCord(0, -1); //up
+		}
+	}
+}
+
 // ============================================================================
 function drawSnake() {
 
